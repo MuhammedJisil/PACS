@@ -9,7 +9,7 @@ const Header = () => {
 
 
  return (
-    <header className="w-full bg-[#2C2C2C] relative z-50">
+    <header className="w-full bg-gray-900 relative z-50">
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 gap-4">
           {/* Logo */}
@@ -55,9 +55,6 @@ const Header = () => {
                 <Link to="/courses/full-stack-development" className="block px-5 py-3 text-[#2C2C2C] hover:bg-[#FF5722] hover:text-white transition-colors duration-200">
                   Full Stack Development
                 </Link>
-                <Link to="/courses/medical-coding" className="block px-5 py-3 text-[#2C2C2C] hover:bg-[#FF5722] hover:text-white transition-colors duration-200">
-                  Medical Coding
-                </Link>
                 <Link to="/courses/diploma-fire-safety" className="block px-5 py-3 text-[#2C2C2C] hover:bg-[#FF5722] hover:text-white transition-colors duration-200">
                   Diploma in Fire & Safety
                 </Link>
@@ -86,12 +83,7 @@ const Header = () => {
               </div>
             </div>
 
-            <Link 
-              to="/certificate-verification" 
-              className="px-2 xl:px-3 py-2 text-white text-xs xl:text-sm font-medium hover:text-[#FF5722] transition-colors duration-200 whitespace-nowrap"
-            >
-              CERTIFICATE VERIFICATION
-            </Link>
+          
 
             <Link 
               to="/success-stories" 
@@ -124,11 +116,11 @@ const Header = () => {
       </div>
 
       {/* Mobile Navigation */}
-      <div 
-        className={`lg:hidden bg-[#222222] transition-all duration-300 ease-in-out overflow-hidden ${
-          isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
+     <div 
+  className={`lg:hidden bg-gray-800 transition-all duration-300 ease-in-out overflow-hidden ${
+    isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+  }`}
+>
         <nav className="px-4 py-4 space-y-2">
           <Link 
             to="/our-story" 
