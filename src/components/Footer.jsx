@@ -192,7 +192,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm text-center md:text-left">
-              © 2022 PACS GLOBAL. All rights reserved.
+              © 2025 PACS GLOBAL. All rights reserved.
             </p>
             
             <div className="flex items-center gap-2 text-sm">
