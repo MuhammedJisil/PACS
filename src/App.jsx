@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HelmetProvider } from "react-helmet-async";
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -13,7 +14,6 @@ import OilAndGasPiping from './pages/courses/OilAndGasPiping';
 import MechanicalQA from './pages/courses/MechanicalQA';
 import PipingAndPipeline from './pages/courses/PipingAndPipeline';
 import NDTLevel2 from './pages/courses/NDTLevel2';
-import HealthAndManagement from './pages/courses/HealthAndManagement';
 import FullStackDevelopment from './pages/courses/FullStackDevelopment';
 import DiplomaFireSafety from './pages/courses/DiplomaFireSafety';
 import Nebosh from './pages/courses/Nebosh';
@@ -25,6 +25,7 @@ import HRRecruitment from './pages/services/HRRecruitment';
 
 const App = () => {
   return (
+    <HelmetProvider>
     <Router>
       <Header />
       <main className="flex-grow">
@@ -41,7 +42,6 @@ const App = () => {
           <Route path="/courses/mechanical-qa-qc" element={<MechanicalQA />} />
           <Route path="/courses/piping-and-pipeline" element={<PipingAndPipeline />} />
           <Route path="/courses/ndt-level-2" element={<NDTLevel2 />} />
-          <Route path="/courses/health-and-management" element={<HealthAndManagement />} />
           <Route path="/courses/full-stack-development" element={<FullStackDevelopment />} />
           <Route path="/courses/diploma-fire-safety" element={<DiplomaFireSafety />} />
           <Route path="/courses/nebosh" element={<Nebosh />} />
@@ -54,6 +54,7 @@ const App = () => {
       </main>
       <Footer />
     </Router>
+    </HelmetProvider>
   );
 };
 

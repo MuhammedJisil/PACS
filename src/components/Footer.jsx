@@ -18,16 +18,9 @@ const Footer = () => {
     { name: 'Mechanical QA/QC', path: '/courses/mechanical-qa-qc' },
     { name: 'Piping & Pipeline', path: '/courses/piping-and-pipeline' },
     { name: 'NDT Level 2', path: '/courses/ndt-level-2' },
-    { name: 'Hospital Management', path: '/courses/health-and-management' },
     { name: 'Full Stack Development', path: '/courses/full-stack-development' },
     { name: 'Diploma Fire Safety', path: '/courses/diploma-fire-safety' },
     { name: 'NEBOSH', path: '/courses/nebosh' }
-  ];
-
-  const services = [
-    { name: 'Onsite Internship', path: '/services/onsite-internship' },
-    { name: 'Job Training', path: '/services/job-training' },
-    { name: 'HR Recruitment', path: '/services/hr-recruitment' }
   ];
 
   return (

@@ -49,9 +49,6 @@ const Header = () => {
                 <Link to="/courses/ndt-level-2" className="block px-5 py-3 text-[#2C2C2C] hover:bg-[#FF5722] hover:text-white transition-colors duration-200">
                   NDT Level-II
                 </Link>
-                <Link to="/courses/health-and-management" className="block px-5 py-3 text-[#2C2C2C] hover:bg-[#FF5722] hover:text-white transition-colors duration-200">
-                  Health and Management
-                </Link>
                 <Link to="/courses/full-stack-development" className="block px-5 py-3 text-[#2C2C2C] hover:bg-[#FF5722] hover:text-white transition-colors duration-200">
                   Full Stack Development
                 </Link>
