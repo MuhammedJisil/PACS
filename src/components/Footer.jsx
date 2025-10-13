@@ -20,7 +20,10 @@ const Footer = () => {
     { name: 'NDT Level 2', path: '/courses/ndt-level-2' },
     { name: 'Full Stack Development', path: '/courses/full-stack-development' },
     { name: 'Diploma Fire Safety', path: '/courses/diploma-fire-safety' },
-    { name: 'NEBOSH', path: '/courses/nebosh' }
+    { name: 'NEBOSH', path: '/courses/nebosh' },
+    { name: 'Diploma Welding Technology', path: '/courses/diploma-welding-technology' },
+    { name: 'Certification Business Analyst Operation', path: '/courses/certification-business-analyst-operation' },
+    { name: 'Diploma Logistics & SCM', path: '/courses/diploma-logistics-scm' },
   ];
 
   return (

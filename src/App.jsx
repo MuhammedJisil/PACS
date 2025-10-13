@@ -17,6 +17,9 @@ import NDTLevel2 from './pages/courses/NDTLevel2';
 import FullStackDevelopment from './pages/courses/FullStackDevelopment';
 import DiplomaFireSafety from './pages/courses/DiplomaFireSafety';
 import Nebosh from './pages/courses/Nebosh';
+import DiplomaLogisticsSCM from './pages/courses/DiplomaLogisticsSCM';
+import DiplomaWeldingTechnology from './pages/courses/DiplomaWeldingTechnology';
+import CertificationBusinessAnalystOperation from './pages/courses/CertificationBusinessAnalystOperation';
 
 // Service Pages
 import OnSiteInternship from './pages/services/OnSiteInternship';
@@ -45,6 +48,9 @@ const App = () => {
           <Route path="/courses/full-stack-development" element={<FullStackDevelopment />} />
           <Route path="/courses/diploma-fire-safety" element={<DiplomaFireSafety />} />
           <Route path="/courses/nebosh" element={<Nebosh />} />
+          <Route path="/courses/diploma-logistics-scm" element={<DiplomaLogisticsSCM />} />
+          <Route path="/courses/diploma-welding-technology" element={<DiplomaWeldingTechnology />} />
+          <Route path="/courses/certification-business-analyst-operation" element={<CertificationBusinessAnalystOperation />} />
 
           {/* Service Routes */}
           <Route path="/services/onsite-internship" element={<OnSiteInternship />} />

@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
@@ -7,15 +7,14 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
 
-
- return (
+  return (
     <header className="w-full bg-gray-900 relative z-50">
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 gap-4">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
             <img 
-              src={logo} 
+              src={logo}
               alt="PACS Logo" 
               className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
             />
@@ -58,6 +57,15 @@ const Header = () => {
                 <Link to="/courses/nebosh" className="block px-5 py-3 text-[#2C2C2C] hover:bg-[#FF5722] hover:text-white transition-colors duration-200">
                   NEBOSH
                 </Link>
+                <Link to="/courses/diploma-logistics-scm" className="block px-5 py-3 text-[#2C2C2C] hover:bg-[#FF5722] hover:text-white transition-colors duration-200">
+                  Diploma in Logistics & SCM
+                </Link>
+                <Link to="/courses/diploma-welding-technology" className="block px-5 py-3 text-[#2C2C2C] hover:bg-[#FF5722] hover:text-white transition-colors duration-200">
+                  Diploma in Welding Technology
+                </Link>
+                <Link to="/courses/certification-business-analyst-operation" className="block px-5 py-3 text-[#2C2C2C] hover:bg-[#FF5722] hover:text-white transition-colors duration-200">
+                  Certification in Business Analyst Operation
+                </Link>
               </div>
             </div>
 
@@ -79,8 +87,6 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-
-          
 
             <Link 
               to="/success-stories" 
@@ -113,11 +119,11 @@ const Header = () => {
       </div>
 
       {/* Mobile Navigation */}
-     <div 
-  className={`lg:hidden bg-gray-800 transition-all duration-300 ease-in-out overflow-hidden ${
-    isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
-  }`}
->
+      <div 
+        className={`lg:hidden bg-gray-800 transition-all duration-300 ease-in-out overflow-hidden ${
+          isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
         <nav className="px-4 py-4 space-y-2">
           <Link 
             to="/our-story" 
@@ -147,20 +153,23 @@ const Header = () => {
               <Link to="/courses/ndt-level-2" className="block px-8 py-2 text-gray-300 hover:text-[#FF5722] hover:pl-10 transition-all" onClick={() => setIsMenuOpen(false)}>
                 NDT Level-II
               </Link>
-              <Link to="/courses/health-and-management" className="block px-8 py-2 text-gray-300 hover:text-[#FF5722] hover:pl-10 transition-all" onClick={() => setIsMenuOpen(false)}>
-                Health and Management
-              </Link>
               <Link to="/courses/full-stack-development" className="block px-8 py-2 text-gray-300 hover:text-[#FF5722] hover:pl-10 transition-all" onClick={() => setIsMenuOpen(false)}>
                 Full Stack Development
-              </Link>
-              <Link to="/courses/medical-coding" className="block px-8 py-2 text-gray-300 hover:text-[#FF5722] hover:pl-10 transition-all" onClick={() => setIsMenuOpen(false)}>
-                Medical Coding
               </Link>
               <Link to="/courses/diploma-fire-safety" className="block px-8 py-2 text-gray-300 hover:text-[#FF5722] hover:pl-10 transition-all" onClick={() => setIsMenuOpen(false)}>
                 Diploma in Fire & Safety
               </Link>
               <Link to="/courses/nebosh" className="block px-8 py-2 text-gray-300 hover:text-[#FF5722] hover:pl-10 transition-all" onClick={() => setIsMenuOpen(false)}>
                 NEBOSH
+              </Link>
+              <Link to="/courses/diploma-logistics-scm" className="block px-8 py-2 text-gray-300 hover:text-[#FF5722] hover:pl-10 transition-all" onClick={() => setIsMenuOpen(false)}>
+                Diploma in Logistics & SCM
+              </Link>
+              <Link to="/courses/diploma-welding-technology" className="block px-8 py-2 text-gray-300 hover:text-[#FF5722] hover:pl-10 transition-all" onClick={() => setIsMenuOpen(false)}>
+                Diploma in Welding Technology
+              </Link>
+              <Link to="/courses/certification-business-analyst-operation" className="block px-8 py-2 text-gray-300 hover:text-[#FF5722] hover:pl-10 transition-all" onClick={() => setIsMenuOpen(false)}>
+                Certification in Business Analyst Operation
               </Link>
             </div>
           </div>
