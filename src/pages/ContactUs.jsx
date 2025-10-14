@@ -25,11 +25,12 @@ const ContactUs = () => {
     'Mechanical QA/QC',
     'Piping and Pipeline Engineering',
     'NDT Level-II',
-    'Health and Management',
+    'Diploma in Welding Technology',
     'Full Stack Development',
-    'Medical Coding',
+    'Diploma in Logistics & SCM',
     'Diploma in Fire & Safety',
-    'NEBOSH'
+    'NEBOSH',
+    "Certification in Business Analyst Operation"
   ];
 
   const handleChange = (e) => {
