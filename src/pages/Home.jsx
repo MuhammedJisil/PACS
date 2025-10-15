@@ -1,6 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Users, Award, Briefcase, Target, BookOpen, CheckCircle } from 'lucide-react';
 
+// Import images
+// Import images
+import oilAndGasPipeImg from '../assets/oilandgaspipe.jpg';
+import mechanicalQAImg from '../assets/mechanicalqaqc.jpeg';
+import pipingPipelineImg from '../assets/pipingandpipeline.png';
+import ndtLevel2Img from '../assets/ndtlevel2.jpeg';
+import fullStackImg from '../assets/fullstack.jpeg';
+import fireAndSafetyImg from '../assets/fireandsafety.jpg';
+import neboshImg from '../assets/nebosh.jpeg';
+import logisticsImg from '../assets/logistics.jpeg';
+import weldingImg from '../assets/welding.jpeg';
+import hrRecruitmentImg from '../assets/HR_recruitment.jpeg';
+import heroImg from '../assets/image-1.png';
+import ourStoryImg from '../assets/OurStory.png';
+
 const HomePage = () => {
   const [visibleSections, setVisibleSections] = useState(new Set());
 
@@ -29,41 +44,69 @@ const HomePage = () => {
       duration: '3 Months',
       eligibility: '+2/ Diploma/ B. Tech',
       goal: '$25000',
-      link: '/courses/OilAndGasPiping.jsx'
+      link: '/courses/oil-and-gas-piping',
+      image: oilAndGasPipeImg
     },
     {
       title: 'Mechanical QA/QC',
       duration: '1 Month',
       eligibility: '+2/ Diploma/ B. Tech',
-      link: '/courses/MechanicalQA.jsx'
+      goal: '$25000',
+      link: '/courses/mechanical-qa-qc',
+      image: mechanicalQAImg
     },
     {
       title: 'Piping and Pipeline Engineering',
       duration: '1 Month',
       eligibility: '+2/ Diploma/ B. Tech',
       goal: '$25000',
-      link: '/courses/PipingAndPipeline.jsx'
+      link: '/courses/piping-and-pipeline',
+      image: pipingPipelineImg
     },
     {
-      title: 'Hospital Management',
-      duration: '6 Months/ 3 Months',
-      eligibility: '+2/ Any Degree',
+      title: 'NDT Level 2',
+      duration: '1 Month',
+      eligibility: '+2/ Diploma/ B. Tech',
       goal: '$25000',
-      link: '/courses/HealthAndManagement.jsx'
+      link: '/courses/ndt-level-2',
+      image: ndtLevel2Img
     },
     {
       title: 'Full Stack Development',
       duration: '3 Months',
       eligibility: '+2/ Diploma/ B. Tech',
       goal: '$25000',
-      link: '/courses/FullStackDevelopment.jsx'
+      link: '/courses/full-stack-development',
+      image: fullStackImg
     },
     {
-      title: 'Medical Coding',
-      duration: '3 Months',
+      title: 'Diploma in Fire & Safety',
+      duration: '6 Months',
       eligibility: '+2/ Any Degree',
       goal: '$25000',
-      link: '/courses/MedicalCoding.jsx'
+      link: '/courses/diploma-fire-safety',
+      image: fireAndSafetyImg
+    },
+    {
+      title: 'Diploma in Logistics & SCM',
+      duration: '6 Months',
+      eligibility: '+2/ Any Degree',
+      link: '/courses/diploma-logistics-scm',
+      image: logisticsImg
+    },
+    {
+      title: 'Diploma in Welding Technology',
+      duration: '6 Months',
+      eligibility: '+2/ Diploma/ B. Tech',
+      link: '/courses/diploma-welding-technology',
+      image: weldingImg
+    },
+    {
+      title: 'Certification in Business Analyst Operation',
+      duration: '3 Months',
+      eligibility: '+2/ Any Degree',
+      link: '/courses/certification-business-analyst-operation',
+      image: hrRecruitmentImg
     }
   ];
 
@@ -99,13 +142,15 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }}></div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-900">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <img 
+            src={heroImg} 
+            alt="Hero Background" 
+            className="w-full h-full object-cover opacity-40"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-800/70 to-gray-900/80"></div>
         </div>
         
         {/* Animated gradient orbs */}
@@ -120,12 +165,18 @@ const HomePage = () => {
             Making you a professional, ready to crack the opportunities coming your way in core industries.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg font-semibold text-lg hover:shadow-xl hover:shadow-orange-500/50 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+            <a 
+              href="/register-now"
+              className="px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg font-semibold text-lg hover:shadow-xl hover:shadow-orange-500/50 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+            >
               Apply Now <ArrowRight size={20} />
-            </button>
-            <button className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold text-lg hover:bg-white/20 transition-all duration-300 border border-white/20">
-              Schedule a Demo
-            </button>
+            </a>
+            <a 
+              href="/our-story"
+              className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold text-lg hover:bg-white/20 transition-all duration-300 border border-white/20 flex items-center justify-center gap-2"
+            >
+              Our Story
+            </a>
           </div>
         </div>
       </section>
@@ -164,13 +215,27 @@ const HomePage = () => {
             </p>
           </div>
           
-          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-            <p className="text-gray-700 text-lg leading-relaxed mb-6">
-              We are one of the best educational institution working since 2018, in Kerala and Karnataka. We provide best training & certification in the field of Mechanical, Electrical, Civil and Quality Management Engineering. We offer unique opportunities to face challenges through our enriched learning, academic excellence, professional training and corporate exposure.
-            </p>
-            <p className="text-gray-700 text-lg leading-relaxed">
-              We deliver courses and examinations to all major industrial sectors like oil & gas, Logistics, Mechanical, Civil and Safety. If you are interested in pursuing a career in the oil and gas industry in Kochi and Mangalore, our website can be a valuable resource. We provide information on the top companies in the region, as well as tips on how to prepare for interviews and increase your chances of landing the job of your dreams.
-            </p>
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Image */}
+              <div className="h-full">
+                <img 
+                  src={ourStoryImg} 
+                  alt="Our Story" 
+                  className="w-full h-full object-cover min-h-[400px]"
+                />
+              </div>
+              
+              {/* Text Content */}
+              <div className="p-8 md:p-12">
+                <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                  We are one of the best educational institution working since 2018, in Kerala and Karnataka. We provide best training & certification in the field of Mechanical, Electrical, Civil and Quality Management Engineering. We offer unique opportunities to face challenges through our enriched learning, academic excellence, professional training and corporate exposure.
+                </p>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  We deliver courses and examinations to all major industrial sectors like oil & gas, Logistics, Mechanical, Civil and Safety. If you are interested in pursuing a career in the oil and gas industry in Kochi and Mangalore, our website can be a valuable resource. We provide information on the top companies in the region, as well as tips on how to prepare for interviews and increase your chances of landing the job of your dreams.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -189,13 +254,18 @@ const HomePage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {courses.map((course, index) => (
-              <div 
-                key={index} 
-                className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200"
+              <a 
+                key={index}
+                href={course.link}
+                className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 block"
               >
-                {/* Image Placeholder */}
-                <div className="h-48 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
-                  <BookOpen className="w-16 h-16 text-white opacity-50" />
+                {/* Course Image */}
+                <div className="h-48 overflow-hidden">
+                  <img 
+                    src={course.image} 
+                    alt={course.title}
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
                 
                 <div className="p-6">
@@ -210,11 +280,11 @@ const HomePage = () => {
                       </div>
                     )}
                   </div>
-                  <button className="w-full py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-orange-500/50 transition-all duration-300 flex items-center justify-center gap-2">
+                  <div className="w-full py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-orange-500/50 transition-all duration-300 flex items-center justify-center gap-2">
                     Read More <ArrowRight size={18} />
-                  </button>
+                  </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -239,14 +309,21 @@ const HomePage = () => {
                 <p><span className="font-semibold">Duration:</span> 1 Month</p>
                 <p><span className="font-semibold">Eligibility:</span> +2/ Diploma/ B. Tech</p>
               </div>
-              <button className="px-8 py-4 bg-white text-orange-600 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+              <a 
+                href="/courses/nebosh"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-orange-600 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
                 Read More <ArrowRight size={20} />
-              </button>
+              </a>
             </div>
             
-            {/* Image Placeholder */}
-            <div className="h-96 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center border-2 border-white/30">
-              <Award className="w-32 h-32 text-white opacity-40" />
+            {/* NEBOSH Image */}
+            <div className="h-96 rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src={neboshImg} 
+                alt="NEBOSH Course" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
