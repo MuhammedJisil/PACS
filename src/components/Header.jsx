@@ -102,9 +102,12 @@ const Header = () => {
               CONTACT US
             </Link>
 
-            <button className="ml-2 xl:ml-4 px-4 xl:px-6 py-2 xl:py-2.5 bg-[#FF5722] text-white text-xs xl:text-sm font-bold rounded hover:bg-[#FF4B00] hover:shadow-lg hover:scale-105 transition-all duration-200 whitespace-nowrap">
-              Register Now
-            </button>
+           <Link 
+  to="/register-now" 
+  className="ml-2 xl:ml-4 px-4 xl:px-6 py-2 xl:py-2.5 bg-[#FF5722] text-white text-xs xl:text-sm font-bold rounded hover:bg-[#FF4B00] hover:shadow-lg hover:scale-105 transition-all duration-200 whitespace-nowrap"
+>
+  Register Now
+</Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -218,12 +221,13 @@ const Header = () => {
             CONTACT US
           </Link>
 
-          <button 
-            className="w-full mt-4 px-6 py-3 bg-[#FF5722] text-white font-bold rounded hover:bg-[#FF4B00] hover:shadow-lg transition-all duration-200"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Register Now
-          </button>
+         <Link 
+  to="/register-now"
+  className="w-full mt-4 px-6 py-3 bg-[#FF5722] text-white font-bold rounded hover:bg-[#FF4B00] hover:shadow-lg transition-all duration-200 block text-center"
+  onClick={() => setIsMenuOpen(false)}
+>
+  Register Now
+</Link>
         </nav>
       </div>
     </header>
