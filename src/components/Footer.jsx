@@ -5,6 +5,11 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
 const Footer = () => {
+  // Function to scroll to top
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const quickLinks = [
     { name: 'Home', path: '/' },
     { name: 'Our Story', path: '/our-story' },
@@ -73,6 +78,8 @@ const Footer = () => {
                             if (element) {
                               element.scrollIntoView({ behavior: 'smooth', block: 'start' });
                             }
+                          } else {
+                            scrollToTop();
                           }
                         }}
                       >
@@ -86,6 +93,7 @@ const Footer = () => {
                     <li key={index}>
                       <Link 
                         to={link.path}
+                        onClick={scrollToTop}
                         className="text-gray-400 hover:text-orange-500 transition-colors duration-300 text-sm flex items-center gap-2 group"
                       >
                         <span className="w-0 group-hover:w-2 h-0.5 bg-orange-500 transition-all duration-300"></span>
@@ -109,6 +117,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link 
                     to={course.path}
+                    onClick={scrollToTop}
                     className="text-gray-400 hover:text-orange-500 transition-colors duration-300 text-sm flex items-center gap-2 group"
                   >
                     <span className="w-0 group-hover:w-2 h-0.5 bg-orange-500 transition-all duration-300"></span>
@@ -168,7 +177,7 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Social Media Icons (Optional) */}
+            {/* Social Media Icons */}
             <div className="flex gap-4 mt-6">
               <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-br hover:from-orange-500 hover:to-orange-600 transition-all duration-300 group">
                 <svg className="w-5 h-5 text-gray-400 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
