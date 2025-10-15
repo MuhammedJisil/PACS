@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Award, Briefcase, Target, BookOpen, CheckCircle } from 'lucide-react';
 
-// Import images
 // Import images
 import oilAndGasPipeImg from '../assets/oilandgaspipe.jpg';
 import mechanicalQAImg from '../assets/mechanicalqaqc.jpeg';
@@ -51,7 +51,6 @@ const HomePage = () => {
       title: 'Mechanical QA/QC',
       duration: '1 Month',
       eligibility: '+2/ Diploma/ B. Tech',
-      goal: '$25000',
       link: '/courses/mechanical-qa-qc',
       image: mechanicalQAImg
     },
@@ -165,18 +164,18 @@ const HomePage = () => {
             Making you a professional, ready to crack the opportunities coming your way in core industries.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/register-now"
+            <Link 
+              to="/register-now"
               className="px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg font-semibold text-lg hover:shadow-xl hover:shadow-orange-500/50 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
             >
               Apply Now <ArrowRight size={20} />
-            </a>
-            <a 
-              href="/our-story"
+            </Link>
+            <Link 
+              to="/our-story"
               className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold text-lg hover:bg-white/20 transition-all duration-300 border border-white/20 flex items-center justify-center gap-2"
             >
               Our Story
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -254,9 +253,9 @@ const HomePage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {courses.map((course, index) => (
-              <a 
+              <Link 
                 key={index}
-                href={course.link}
+                to={course.link}
                 className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 block"
               >
                 {/* Course Image */}
@@ -284,7 +283,7 @@ const HomePage = () => {
                     Read More <ArrowRight size={18} />
                   </div>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -309,12 +308,12 @@ const HomePage = () => {
                 <p><span className="font-semibold">Duration:</span> 1 Month</p>
                 <p><span className="font-semibold">Eligibility:</span> +2/ Diploma/ B. Tech</p>
               </div>
-              <a 
-                href="/courses/nebosh"
+              <Link 
+                to="/courses/nebosh"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-white text-orange-600 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 Read More <ArrowRight size={20} />
-              </a>
+              </Link>
             </div>
             
             {/* NEBOSH Image */}
@@ -371,9 +370,12 @@ const HomePage = () => {
           <h2 className="text-sm font-bold uppercase tracking-wider mb-2 opacity-90">Join us now</h2>
           <h3 className="text-4xl md:text-5xl font-bold mb-4">Global Reach, Local Excellence</h3>
           <p className="text-2xl mb-8">Let today be our first day on a new adventure.</p>
-          <button className="px-10 py-5 bg-white text-blue-600 rounded-lg font-bold text-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto">
+          <Link 
+            to="/register-now"
+            className="px-10 py-5 bg-white text-blue-600 rounded-lg font-bold text-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto"
+          >
             Apply Now <ArrowRight size={24} />
-          </button>
+          </Link>
         </div>
       </section>
     </div>
