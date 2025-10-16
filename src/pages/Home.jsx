@@ -43,7 +43,6 @@ const HomePage = () => {
       title: 'Oil and Gas Piping Engineering',
       duration: '3 Months',
       eligibility: '+2/ Diploma/ B. Tech',
-      goal: '$25000',
       link: '/courses/oil-and-gas-piping',
       image: oilAndGasPipeImg
     },
@@ -58,7 +57,6 @@ const HomePage = () => {
       title: 'Piping and Pipeline Engineering',
       duration: '1 Month',
       eligibility: '+2/ Diploma/ B. Tech',
-      goal: '$25000',
       link: '/courses/piping-and-pipeline',
       image: pipingPipelineImg
     },
@@ -66,7 +64,6 @@ const HomePage = () => {
       title: 'NDT Level 2',
       duration: '1 Month',
       eligibility: '+2/ Diploma/ B. Tech',
-      goal: '$25000',
       link: '/courses/ndt-level-2',
       image: ndtLevel2Img
     },
@@ -74,7 +71,6 @@ const HomePage = () => {
       title: 'Full Stack Development',
       duration: '3 Months',
       eligibility: '+2/ Diploma/ B. Tech',
-      goal: '$25000',
       link: '/courses/full-stack-development',
       image: fullStackImg
     },
@@ -82,7 +78,6 @@ const HomePage = () => {
       title: 'Diploma in Fire & Safety',
       duration: '6 Months',
       eligibility: '+2/ Any Degree',
-      goal: '$25000',
       link: '/courses/diploma-fire-safety',
       image: fireAndSafetyImg
     },
