@@ -3,6 +3,7 @@ import { HelmetProvider } from "react-helmet-async";
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 import Home from './pages/Home';
 import OurStory from './pages/OurStory';
@@ -33,6 +34,7 @@ const App = () => {
     <Router>
       <Header />
        <ScrollToTop />
+         <ScrollToTopButton />
       <main className="flex-grow">
         <Routes>
           {/* Main Routes */}
