@@ -247,7 +247,7 @@ const Footer = () => {
             <div className="flex items-center gap-2 text-sm">
               <span className="text-gray-400">Sited by:</span>
               <a
-                href="#"
+                href="https://www.acceleratein.org/"
                 className="text-blue-400 hover:text-blue-300 transition-colors duration-300 flex items-center gap-1 font-semibold"
               >
                 Accelerate

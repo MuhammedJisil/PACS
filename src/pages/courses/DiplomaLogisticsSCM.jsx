@@ -29,7 +29,7 @@ const DiplomaLogisticsSCM = () => {
       title: "Full Stack Development",
       path: "/courses/full-stack-development",
     },
-    { title: "Mechanical QA", path: "/courses/mechanical-qa" },
+    { title: "Mechanical QA", path: "/courses/mechanical-qa-qc" },
     { title: "NDT Level 2", path: "/courses/ndt-level2" },
     { title: "NEBOSH", path: "/courses/nebosh" },
     { title: "Oil and Gas Piping", path: "/courses/oil-and-gas-piping" },
